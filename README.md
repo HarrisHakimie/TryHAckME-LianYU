@@ -55,7 +55,8 @@ gobuster dir -u http://10.49.165.124/island -w /usr/share/wordlists/dirbuster/di
 ```
 Here we found another directory : /2100
 
-<img width="932" height="543" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (4)" src="https://github.com/user-attachments/assets/0d547723-4c07-46e1-9b4c-3e7472750f25" />
+<img width="932" height="543" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (4)" src="https://github.com/user-attachments/assets/f72f4040-de78-4ea9-9d8c-9168fd2cae32" />
+
 
 Now doing the same again go to the browser and search
 http://10.49.165.124/island/2100
