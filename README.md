@@ -72,6 +72,8 @@ Here it says there is a file with a '.ticket' extension. Run gobuster to find .t
 ```
 gobuster dir -u http://10.49.165.124/island/2100/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x ticket
 ```
+<img width="942" height="536" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (1)" src="https://github.com/user-attachments/assets/f2083b61-c579-4b00-87e9-d3b018cf0d17" />
+
 
 
 
