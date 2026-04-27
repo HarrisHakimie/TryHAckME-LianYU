@@ -55,8 +55,7 @@ gobuster dir -u http://10.49.165.124/island -w /usr/share/wordlists/dirbuster/di
 ```
 Here we found another directory : /2100
 
-<img width="932" height="543" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (4)" src="https://github.com/user-attachments/assets/f72f4040-de78-4ea9-9d8c-9168fd2cae32" />
-
+<img width="942" height="536" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (1)" src="https://github.com/user-attachments/assets/ab822633-90d4-4969-8b26-e0e4acd428d8" />
 
 Now doing the same again go to the browser and search
 http://10.49.165.124/island/2100
@@ -72,7 +71,9 @@ Here it says there is a file with a '.ticket' extension. Run gobuster to find .t
 ```
 gobuster dir -u http://10.49.165.124/island/2100/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x ticket
 ```
-<img width="942" height="536" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (1)" src="https://github.com/user-attachments/assets/f2083b61-c579-4b00-87e9-d3b018cf0d17" />
+<img width="932" height="543" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (4)" src="https://github.com/user-attachments/assets/3c95f8b2-8411-4b6c-9380-c5b58f915e47" />
+
+
 
 
 
