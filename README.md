@@ -131,18 +131,24 @@ ssh slade@10.49.165.124
 Once enter ssh, read the file user.txt
 
 <img width="947" height="865" alt="WhatsApp Image 2026-04-23 at 3 53 40 PM" src="https://github.com/user-attachments/assets/68fd1855-69ec-4bd8-9534-3612ee1d4efe" />
+
 Then run
 ```
 sudo -l
 ```
+
 then run, to access root
+
 ```
 sudo pkexec su
 ```
+
 Once run the command, type 'ls' and it will show root.txt file. Read the file using cat command
+
 ```
 cat root.txt
 ```
+
 And mission accomplished.
 
 <img width="943" height="877" alt="WhatsApp Image 2026-04-23 at 3 53 40 PM (1)" src="https://github.com/user-attachments/assets/aa73976c-429c-4e79-b725-d8a4bb6b747e" />
