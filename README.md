@@ -38,7 +38,8 @@ gobuster dir -u http://10.49.165.124 -w /usr/share/wordlists/dirbuster/directory
 
 Findings: Found a directory: /island
 
-After found the hidden directory, go to browser and search http://10.49.165.124/island/
+After found the hidden directory, go to browser and search 
+http://10.49.165.124/island/
 
 <img width="900" height="773" alt="WhatsApp Image 2026-04-23 at 3 53 40 PM (5)" src="https://github.com/user-attachments/assets/1fd02d0f-6a6b-4750-906a-2df36005da63" />
 
@@ -61,18 +62,15 @@ Now doing the same again go to the browser and search
 http://10.49.165.124/island/2100
 
 <img width="954" height="854" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (2)" src="https://github.com/user-attachments/assets/0a3037dd-aa33-4fc2-b31f-f9b866d52618" />
-
 View the page source again cause usually they like to hide something here--
 
 <img width="938" height="861" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (3)" src="https://github.com/user-attachments/assets/5b47e662-ef1d-4b49-8438-e98f79ebae72" />
-
 Here it says there is a file with a '.ticket' extension. Run gobuster to find .ticket as the hint said
 
 ```
 gobuster dir -u http://10.49.165.124/island/2100/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x ticket
 ```
 <img width="932" height="543" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (4)" src="https://github.com/user-attachments/assets/3c95f8b2-8411-4b6c-9380-c5b58f915e47" />
-
 Found another director : /green_arrow.ticket
 
 Again going to the browser search
