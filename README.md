@@ -1,4 +1,4 @@
-TryHAckME-LianYU
+<img width="478" height="430" alt="image" src="https://github.com/user-attachments/assets/e39b9592-e01b-4c43-a98f-b5a501c764f8" /><img width="393" height="624" alt="image" src="https://github.com/user-attachments/assets/cab142ef-c734-4e78-bdf0-b5065592104e" />TryHAckME-LianYU
 WEEK 6
 Room Link: https://tryhackme.com/room/lianyu
 
@@ -73,6 +73,79 @@ gobuster dir -u http://10.49.165.124/island/2100/ -w /usr/share/wordlists/dirbus
 ```
 <img width="932" height="543" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (4)" src="https://github.com/user-attachments/assets/3c95f8b2-8411-4b6c-9380-c5b58f915e47" />
 
+Found another director : /green_arrow.ticket
+
+Again going to the browser search
+http://10.49.165.124/island/2100/green_arrow.ticket.
+
+<img width="943" height="866" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (5)" src="https://github.com/user-attachments/assets/529b0d47-9bd1-4202-bc28-72e62be3f8c1" />
+
+Found an encryption : 'RTy8yhBQdscX' . So now lets try to decode it ---
+
+Go to https://gchq.github.io/CyberChef/
+
+Use 'FromBase58' to decode it.
+
+<img width="1600" height="766" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (6)" src="https://github.com/user-attachments/assets/88e631d5-172e-4812-b8d4-5f4e31210158" />
+We have cracked it : '!#th3h00d' - This is the FTP Password.
+
+## Step 3: FTP Login
+Now we have the username and password Username - vigilante Password - 
+!#th3h00d
+
+<img width="935" height="236" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (7)" src="https://github.com/user-attachments/assets/a39652ba-ff89-4a1e-abc5-8ed514b82143" />
+Once success to login ftp, use 'ls' command to look for image files in the server. If find any files there, download all the files using this command
+
+```
+mget *
+```
+<img width="907" height="592" alt="WhatsApp Image 2026-04-23 at 3 53 41 PM (8)" src="https://github.com/user-attachments/assets/31bf18fd-294f-4bca-9311-0b4ade55db9f" />
+
+<img width="538" height="370" alt="Screenshot 2026-04-27 120333" src="https://github.com/user-attachments/assets/0f8790c9-d036-4c1f-862b-ffbc598c5d5d" />
+
+<img width="393" height="624" alt="Screenshot 2026-04-27 120356" src="https://github.com/user-attachments/assets/2a115d8d-e908-475d-8b9b-c6439e508eb7" />
+
+<img width="478" height="430" alt="Screenshot 2026-04-27 120419" src="https://github.com/user-attachments/assets/e478a4c4-9285-43e6-87aa-3bc9ac005be2" />
+I checked the image use hex editor. The first 8 bit of the Leave_me_alone.png is not correct according to png format.
+
+<img width="536" height="394" alt="Screenshot 2026-04-27 120448" src="https://github.com/user-attachments/assets/c1e6ed75-36a4-464b-aa90-378b69ac2640" />
+
+<img width="537" height="379" alt="Screenshot 2026-04-27 120506" src="https://github.com/user-attachments/assets/4209923e-94bf-4b04-a576-73682d44dd62" />
+After open the photo, the password is given for steghide. Try to enter the password when use steghide command on the png file.
+
+```
+steghide extract -sf aa.jpg
+```
+<img width="932" height="800" alt="WhatsApp Image 2026-04-23 at 3 53 45 PM" src="https://github.com/user-attachments/assets/49f1530f-fe08-4d24-b74b-71ad197bac08" />
+Now using the password 'password' we got earlier successfully extracted the .jpg file to a ss.zip file. We found a a 'passwd.txt' and a 'shado file' unzipping the ss.zip file.
+
+Now cat 'shado' file and you get a password : 'M3tahuman' -- (ssh password)
+
+Now as we have got the ssh password we can now login -- User - slade password - 
+M3tahuman
+
+```
+ssh slade@10.49.165.124
+```
+<img width="970" height="869" alt="WhatsApp Image 2026-04-23 at 3 53 45 PM (1)" src="https://github.com/user-attachments/assets/6ca69efe-72c7-4bdb-9ad9-485f14c2f080" />
+Once enter ssh, read the file user.txt
+
+<img width="947" height="865" alt="WhatsApp Image 2026-04-23 at 3 53 40 PM" src="https://github.com/user-attachments/assets/68fd1855-69ec-4bd8-9534-3612ee1d4efe" />
+Then run
+```
+sudo -l
+```
+then run, to access root
+```
+sudo pkexec su
+```
+Once run the command, type 'ls' and it will show root.txt file. Read the file using cat command
+```
+cat root.txt
+```
+And mission accomplished.
+
+<img width="943" height="877" alt="WhatsApp Image 2026-04-23 at 3 53 40 PM (1)" src="https://github.com/user-attachments/assets/aa73976c-429c-4e79-b725-d8a4bb6b747e" />
 
 
 
