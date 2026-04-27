@@ -1,4 +1,4 @@
-<img width="478" height="430" alt="image" src="https://github.com/user-attachments/assets/e39b9592-e01b-4c43-a98f-b5a501c764f8" /><img width="393" height="624" alt="image" src="https://github.com/user-attachments/assets/cab142ef-c734-4e78-bdf0-b5065592104e" />TryHAckME-LianYU
+TryHAckME-LianYU
 WEEK 6
 Room Link: https://tryhackme.com/room/lianyu
 
